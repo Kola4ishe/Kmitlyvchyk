@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kmitlyvchyk | ШІ-підготовка за стандартами МОН</title>
+    <style>
+        /* ОСНОВНІ СТИЛІ */
+        :root {
+            --primary: #0070f3;
+            --primary-hover: #005bc4;
+            --bg: #f4f9ff;
+            --white: #ffffff;
+            --text: #1a202c;
+            --text-light: #4a5568;
+            --accent-green: #dcfce7;
+            --dark-green: #166534;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* НАВІГАЦІЯ */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: var(--white);
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        /* ГЕРОЙ-СЕКЦІЯ */
+        header {
+            text-align: center;
+            padding: 80px 5%;
+            background: linear-gradient(180deg, #ffffff 0%, #f4f9ff 100%);
+        }
+
+        .badge {
+            background: var(--accent-green);
+            color: var(--dark-green);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .blue { color: var(--primary); }
+
+        .hero-p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* КАРТКИ ПЕРЕВАГ */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 40px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 112, 243, 0.05);
+            border: 1px solid #eef2f7;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* ПЛАНУВАЛЬНИК */
+        .planner-box {
+            background: var(--white);
+            margin: 60px 5%;
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            border: 2px solid var(--primary);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+
+        button {
+            padding: 15px 25px;
+            border: 2px solid var(--primary);
+            background: var(--white);
+            color: var(--primary);
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .result-area {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8fbff;
+            border-radius: 15px;
+            min-height: 80px;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .planner-box { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">Kmitlyv<span>chyk</span></a>
+        <div style="font-weight: 600; color: var(--primary);">AI Education</div>
+    </nav>
+
+    <header>
+        <div class="badge">✓ Верифіковано за програмою 2025-2026</div>
+        <h1>Навчання без <span class="blue">«галюцинацій»</span> ШІ</h1>
+        <p class="hero-p">
+            Ми навчили нейромережу на базі офіційних підручників та наукових публікацій. 
+            Твій Kmitlyvchyk знає програму краще за будь-який чат-бот.
+        </p>
+    </header>
+
+    <section class="features">
+        <div class="card">
+            <h3>📖 База МОН</h3>
+            <p>ШІ використовує тільки схвалені книги. Якщо факту немає в підручнику — він не буде використаний у навчанні.</p>
+        </div>
+        <div class="card">
+            <h3>⚡ Динамічний план</h3>
+            <p>Вкажи дату іспиту, і алгоритм розіб'є складні теми на щоденні порції інформації.</p>
+        </div>
+        <div class="card">
+            <h3>🔍 Робота над помилками</h3>
+            <p>У кінці дня ШІ проводить бліц-опитування. Слабкі теми автоматично переносяться у план на завтра.</p>
+        </div>
+    </section>
+
+    <div class="planner-box">
+        <h2>Скласти індивідуальний план навчання</h2>
+        <p>Вибери, скільки часу ти готовий приділити підготовці:</p>
+        
+        <div class="btn-group">
+            <button onclick="calculate('30 днів', 'Інтенсив: 6 годин на день. Повний фокус на ключових тестах.')">1 місяць</button>
+            <button onclick="calculate('90 днів', 'Оптимально: 2 години на день. Поглиблене вивчення всіх модулів.')">3 місяці</button>
+            <button onclick="calculate('1 рік', 'Спокійно: 40 хвилин на день. Поступове засвоєння без стресу.')">1 рік</button>
+        </div>
+
+        <div id="result" class="result-area">
+            Оберіть термін, щоб активувати ШІ-планувальник...
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kmitlyvchyk. Платформа створена для свідомого навчання в Україні.</p>
+    </footer>
+
+    <script>
+        function calculate(time, details) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.opacity = '0';
+            
+            setTimeout(() => {
+                resultDiv.innerHTML = `
+                    <h3 style="color: var(--primary); margin-bottom: 10px;">План «${time}» сформовано!</h3>
+                    <p>${details}</p>
+                    <p style="font-size: 0.85rem; margin-top: 10px; color: gray;">*ІІ вже аналізує підручники з Математики, Історії та Укр. мови...</p>
+                `;
+                resultDiv.style.opacity = '1';
+                resultDiv.style.transition = 'opacity 0.5s ease';
+            }, 300);
+        }
+    </script>
+
+</body>
+</html>
