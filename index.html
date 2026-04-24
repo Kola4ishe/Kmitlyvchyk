@@ -129,8 +129,42 @@
         .price-card:hover { 
             transform: translateY(-10px); 
             box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
-        }
+    }
+/* Стили для бегущей строки с логотипами */
+.partners-slider {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 20px 0;
+    overflow: hidden; /* Скрывает то, что выходит за пределы экрана */
+    white-space: nowrap;
+    border-top: 1px solid rgba(0, 112, 243, 0.1);
+    border-bottom: 1px solid rgba(0, 112, 243, 0.1);
+    margin: 40px 0;
+}
 
+.logos-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 100px; /* Расстояние между логотипами */
+    animation: scroll-left 30s linear infinite; /* Скорость движения */
+}
+
+.partners-slider img {
+    height: 50px; /* Высота логотипов */
+    width: auto;
+    filter: grayscale(0.5); /* Делает логотипы слегка серыми для стиля */
+    transition: 0.3s;
+}
+
+.partners-slider img:hover {
+    filter: grayscale(0); /* При наведении становятся цветными */
+}
+
+/* Сама анимация движения */
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
         .price-card.standard { border-top: 10px solid var(--color-standard); }
         .price-card.premium { border-top: 10px solid var(--color-premium); }
         .price-card.ultimate { border-top: 10px solid var(--color-ultimate); }
